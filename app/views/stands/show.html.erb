@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @stand %>
+
+<div>
+  <%= link_to "Edit this stand", edit_stand_path(@stand) %> |
+  <%= link_to "Back to stands", stands_path %>
+
+  <%= button_to "Destroy this stand", @stand, method: :delete %>
+</div>

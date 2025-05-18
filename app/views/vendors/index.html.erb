@@ -1,0 +1,25 @@
+<% content_for :title, "Händler" %>
+
+<div class="container mt-4">
+
+<div id="vendors">
+<table class="table">
+  <thead>
+  <tr>
+    <th><%= Vendor.human_attribute_name("name")%></th>
+    <th><%= Vendor.human_attribute_name("contact")%></th>
+    <th><%= Vendor.human_attribute_name("phone")%></th>
+    <th><%= Vendor.human_attribute_name("email")%></th>
+    <th>Stand</th>
+  </thead>
+  <tbody>
+  <% @vendors.each do |vendor| %>
+    <%= render vendor %>
+  <% end %>
+    </tbody>
+</table>
+
+</div>
+<btn class="btn btn-primary mt-3">
+  <%= link_to "Neuen Händler anlegen", new_vendor_path %>
+</btn>

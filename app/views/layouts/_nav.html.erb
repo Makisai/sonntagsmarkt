@@ -1,0 +1,18 @@
+<nav class="navbar navbar-dark bg-dark">
+  <div class="container-fluid">
+    <ul class="navbar-nav d-flex flex-row align-items-center list-unstyled">
+      <li class="nav-item me-3">
+        <img src="<%= asset_path('logo_volksfestverein.png') %>" alt="" width="50" height="50" class="d-inline-block align-text-center">
+        </li>
+    <li class="nav-item me-3">
+        <%= link_to "Sonntagsmarkt", root_path, class: "nav-link custom-text-color" %>
+      </li>
+      <li class="nav-item me-3">
+        <%= link_to "Händler", vendors_path, class: "nav-link custom-text-color" %>
+      </li>
+    </ul>
+    <div class="d-flex">
+      <%= link_to "Login", class: "btn btn-primary" %>
+    </div>
+  </div>
+</nav>

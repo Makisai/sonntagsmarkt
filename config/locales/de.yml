@@ -1,0 +1,57 @@
+de:
+  activerecord:
+    attributes:
+      stand:
+        width: "Frontmeter"
+        height: "Höhe"
+        depth: "Tiefe"
+        diameter: "Durchmesser"
+        description: "Beschreibung"
+        cooler: "Kühlwagen"
+        table: "Tische/Schirme"
+        selfdriver: "Selbstfahrer"
+        trailer: "Anhänger"
+        power: "Stromanschluss (230 V)"
+        specials: "andere Besonderheiten"
+        misc: "Sonstiges"
+        vendor: "Anbieter"
+      vendor:
+        name: "Name des Betreibenden/Ausstellenden"
+        legalform: "Rechtsform"
+        contact: "Ansprechpartner*in"
+        address: "Adresse"
+        phone: "Telefon/Mobilfunknummer"
+        email: "E-Mail-Adresse"
+        taxnumber: "Steuernummer"
+        taxoffice: "Zuständiges Finanzamt"
+        last_visit: "Letzter Besuch"
+        visit_day: "Besuchstag"
+    errors:
+      models:
+        vendor:
+          attributes:
+            name:
+              blank: "Bitte geben Sie den Namen des Betreibenden ein."
+            address:
+              blank: "Bitte geben Sie die Adresse des Betreibenden ein."
+            phone:
+              blank: "Bitte geben Sie eine Telefonnummer des Betreibenden ein."
+            email:
+              blank: "Bitte geben Sie eine E-Mail-Adresse des Betreibenden ein."
+              invalid: "Bitte geben Sie eine gültige E-Mail-Adresse ein."
+            visit_day:
+              blank: "Bitte geben Sie an ob sie Samstag und/oder Sonntag auf dem Markt Ausstellen wollen."
+        stand:
+          attributes:
+            width:
+              blank: "Bitte geben Sie die Breite des Standes ein."
+            height:
+              blank: "Bitte geben Sie die Höhe des Standes ein."
+            depth:
+              blank: "Bitte geben Sie die Tiefe des Standes ein."
+            description:
+              blank: "Bitte geben Sie eine Beschreibung für Ihren Marktstand ein."
+  vendor:
+    created: Der Händler wurde erfolgreich angelegt.
+    updated: Der Händler wurde erfolgreich aktualisiert.
+    deleted: Der Händler wurde erfolgreich gelöscht.

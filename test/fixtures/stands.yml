@@ -1,0 +1,31 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  width: 9.99
+  height: 9.99
+  depth: 9.99
+  diameter: 9.99
+  description: MyText
+  cooler: 1
+  table: 1
+  selfdriver: false
+  trailer: false
+  power: false
+  specials: MyText
+  misc: MyText
+  vendor: one
+
+two:
+  width: 9.99
+  height: 9.99
+  depth: 9.99
+  diameter: 9.99
+  description: MyText
+  cooler: 1
+  table: 1
+  selfdriver: false
+  trailer: false
+  power: false
+  specials: MyText
+  misc: MyText
+  vendor: two

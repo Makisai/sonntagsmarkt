@@ -1,0 +1,28 @@
+<%= simple_form_for vendor, html: { class: 'form-horizontal' } do |form| %>
+  <% if vendor.errors.any? %>
+    <div class="alert alert-danger">
+      <ul>
+        <% vendor.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="m-3">
+    <%= form.input :name, input_html: { class: 'form-control' } %>
+    <%= form.input :legalform, input_html: { class: 'form-control' } %>
+    <%= form.input :contact, input_html: { class: 'form-control' } %>
+    <%= form.input :address, input_html: { class: 'form-control' } %>
+    <%= form.input :phone, input_html: { class: 'form-control' } %>
+    <%= form.input :email, input_html: { class: 'form-control' } %>
+    <%= form.input :taxnumber, input_html: { class: 'form-control' } %>
+    <%= form.input :taxoffice, input_html: { class: 'form-control' } %>
+    <%= form.input :last_visit, as: :string, input_html: { class: 'form-control' } %>
+    <%= form.input :visit_day, input_html: { class: 'form-control' } %>
+
+    <div class="form-group">
+      <%= form.button :submit, "Händler hinzufügen", class: "btn btn-primary mt-3" %>
+    </div>
+  </div>
+<% end %>

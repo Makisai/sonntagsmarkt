@@ -1,0 +1,11 @@
+<% content_for :title, "Händler Hinzufügen" %>
+
+<h1>Neuer Händler</h1>
+
+<%= render "form", vendor: @vendor %>
+
+<br>
+
+<div>
+  <%= link_to "Zurück zur Händlerübersicht", vendors_path %>
+</div>

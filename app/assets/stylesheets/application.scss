@@ -1,0 +1,29 @@
+// Sassy
+:root {
+  --primary-color: #FBF447;
+  --secondary-color: #00004C;
+  --accent-color: #0f889e;
+  --background-color: #d2edf5;
+  --text-color: #00004C;
+}
+
+$theme-colors: (
+  "primary":    #FBF447,
+  "secondary":  #00004C,
+  "success":    #28a745,
+  "info":       #17a2b8,
+  "warning":    #ffc107,
+  "danger":     #dc3545,
+  "light":      #d2edf5,
+  "dark":       #00004C,
+);
+
+@import "bootstrap";
+
+
+
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}

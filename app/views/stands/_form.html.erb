@@ -1,0 +1,84 @@
+<%= form_with(model: stand) do |form| %>
+  <% if stand.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(stand.errors.count, "error") %> prohibited this stand from being saved:</h2>
+
+      <ul>
+        <% stand.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<div class="m-3">
+  <div>
+    <%= form.label :width, style: "display: block" %>
+    <%= form.text_field :width %>
+  </div>
+
+  <div>
+    <%= form.label :height, style: "display: block" %>
+    <%= form.text_field :height %>
+  </div>
+
+  <div>
+    <%= form.label :depth, style: "display: block" %>
+    <%= form.text_field :depth %>
+  </div>
+
+  <div>
+    <%= form.label :diameter, style: "display: block" %>
+    <%= form.text_field :diameter %>
+  </div>
+
+  <div>
+    <%= form.label :description, style: "display: block" %>
+    <%= form.textarea :description %>
+  </div>
+
+  <div>
+    <%= form.label :cooler, style: "display: block" %>
+    <%= form.number_field :cooler %>
+  </div>
+
+  <div>
+    <%= form.label :table, style: "display: block" %>
+    <%= form.number_field :table %>
+  </div>
+
+  <div>
+    <%= form.label :selfdriver, style: "display: block" %>
+    <%= form.checkbox :selfdriver %>
+  </div>
+
+  <div>
+    <%= form.label :trailer, style: "display: block" %>
+    <%= form.checkbox :trailer %>
+  </div>
+
+  <div>
+    <%= form.label :power, style: "display: block" %>
+    <%= form.checkbox :power %>
+  </div>
+
+  <div>
+    <%= form.label :specials, style: "display: block" %>
+    <%= form.textarea :specials %>
+  </div>
+
+  <div>
+    <%= form.label :misc, style: "display: block" %>
+    <%= form.textarea :misc %>
+  </div>
+
+  <div>
+    <%= form.label :vendor_id, style: "display: block" %>
+    <%= form.text_field :vendor_id, hidden: true %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+</div>
+<% end %>
