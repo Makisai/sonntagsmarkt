@@ -12,7 +12,7 @@
       </li>
     </ul>
     <div class="d-flex">
-      <%= link_to "Login", class: "btn btn-primary" %>
+      <%= link_to "Logout", session_path, method: :delete if authenticated? %>
     </div>
   </div>
 </nav>

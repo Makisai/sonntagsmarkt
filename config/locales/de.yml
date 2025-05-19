@@ -55,3 +55,5 @@ de:
     created: Der Händler wurde erfolgreich angelegt.
     updated: Der Händler wurde erfolgreich aktualisiert.
     deleted: Der Händler wurde erfolgreich gelöscht.
+  validator:
+    phone: "Bitte eine gültige Telefonnummer eingeben."
