@@ -9,17 +9,17 @@
     </div>
   <% end %>
 
-  <div class="m-3">
+  <div class="m-4">
     <%= form.input :name, input_html: { class: 'form-control' } %>
-    <%= form.input :legalform, input_html: { class: 'form-control' } %>
+    <%= form.input :legalform, placeholder:'GmbH, GbR, etc.', input_html: { class: 'form-control' } %>
     <%= form.input :contact, input_html: { class: 'form-control' } %>
-    <%= form.input :address, input_html: { class: 'form-control' } %>
+    <%= form.input :address, placeholder:'Starße, Hausnummer, PLZ und Ort', input_html: { class: 'form-control' } %>
     <%= form.input :phone, input_html: { class: 'form-control' } %>
     <%= form.input :email, input_html: { class: 'form-control' } %>
     <%= form.input :taxnumber, input_html: { class: 'form-control' } %>
     <%= form.input :taxoffice, input_html: { class: 'form-control' } %>
-    <%= form.input :last_visit, as: :string, input_html: { class: 'form-control' } %>
-    <%= form.input :visit_day, input_html: { class: 'form-control' } %>
+    <%= form.input :last_visit, as: :string, placeholder:'In welchem Jahr waren sie zuletzt Teilnehmende am Sonntagsmarkt zum Volksfest in Malchow?', input_html: { class: 'form-control' } %>
+    <%= form.input :visit_day, placeholder: 'Besteht bei Ihnen auch ein Interesse am Samstag, zu verkaufen?', input_html: { class: 'form-control' } %>
 
     <div class="form-group">
       <%= form.button :submit, "Händler hinzufügen", class: "btn btn-primary mt-3" %>

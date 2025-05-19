@@ -4,4 +4,9 @@
       <td><%= vendor.phone %></td>
       <td><%= vendor.email %></td>
       <td><%= link_to "Stand", vendor.stand %></td>
+      <td>
+        <%= button_to vendor, method: :delete, class: "btn btn-danger", form: { data: { turbo_confirm: "SURE about that?" } } do %>
+          <i class="bi bi-trash"></i>
+        <% end %>
+      </td>
     </tr>

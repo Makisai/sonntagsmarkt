@@ -1,4 +1,4 @@
-<%= form_with(model: stand) do |form| %>
+<%= simple_form_for stand, html: { class: 'form-horizontal'} do |form| %>
   <% if stand.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(stand.errors.count, "error") %> prohibited this stand from being saved:</h2>
@@ -12,70 +12,20 @@
   <% end %>
 
 <div class="m-3">
-  <div>
-    <%= form.label :width, style: "display: block" %>
-    <%= form.text_field :width %>
-  </div>
-
-  <div>
-    <%= form.label :height, style: "display: block" %>
-    <%= form.text_field :height %>
-  </div>
-
-  <div>
-    <%= form.label :depth, style: "display: block" %>
-    <%= form.text_field :depth %>
-  </div>
-
-  <div>
-    <%= form.label :diameter, style: "display: block" %>
-    <%= form.text_field :diameter %>
-  </div>
-
-  <div>
-    <%= form.label :description, style: "display: block" %>
-    <%= form.textarea :description %>
-  </div>
-
-  <div>
-    <%= form.label :cooler, style: "display: block" %>
-    <%= form.number_field :cooler %>
-  </div>
-
-  <div>
-    <%= form.label :table, style: "display: block" %>
-    <%= form.number_field :table %>
-  </div>
-
-  <div>
-    <%= form.label :selfdriver, style: "display: block" %>
-    <%= form.checkbox :selfdriver %>
-  </div>
-
-  <div>
-    <%= form.label :trailer, style: "display: block" %>
-    <%= form.checkbox :trailer %>
-  </div>
-
-  <div>
-    <%= form.label :power, style: "display: block" %>
-    <%= form.checkbox :power %>
-  </div>
-
-  <div>
-    <%= form.label :specials, style: "display: block" %>
-    <%= form.textarea :specials %>
-  </div>
-
-  <div>
-    <%= form.label :misc, style: "display: block" %>
-    <%= form.textarea :misc %>
-  </div>
-
-  <div>
-    <%= form.label :vendor_id, style: "display: block" %>
-    <%= form.text_field :vendor_id, hidden: true %>
-  </div>
+  <%= form.input :width, input_html: {class: 'form-control'}%>
+  <%= form.input :height, input_html: {class: 'form-control'}%>
+  <%= form.input :depth, input_html: {class: 'form-control'}%>
+  <%= form.input :diameter, input_html: {class: 'form-control'}%>
+  <%= form.input :description, as: :text, placeholder: 'Was wollen Sie auf dem Sonntagsmarkt anbieten? z.B. Sind Sie Selbsterzeuger? Welche Artikel
+kaufen Sie zu? Bei Imbissbetrieben: Welche Artikel genau wollen sie anbieten?', input_html: {class: 'form-control', rows: 5} %>
+  <%= form.input :cooler, input_html: {class: 'form-control'}%>
+  <%= form.input :table, input_html: {class: 'form-control'}%>
+  <%= form.input :selfdriver, input_html: {class: 'form-check-input', style: 'width: 1.5rem; height: 1.5rem'}, label_html: {style: 'margin-left: 1rem'} %>
+  <%= form.input :trailer, input_html: {class: 'form-check-input', style: 'width: 1.5rem; height: 1.5rem'}, label_html: {style: 'margin-left: 1rem;'} %>
+  <%= form.input :power, input_html: {class: 'form-check-input', style: 'width: 1.5rem; height: 1.5rem'}, label_html: {style: 'margin-left: 1rem;'} %>
+  <%= form.input :specials, input_html: {class: 'form-control'}%>
+  <%= form.input :misc, input_html: {class: 'form-control'}%>
+  <%= form.hidden_field :vendor_id %>
 
   <div>
     <%= form.submit %>

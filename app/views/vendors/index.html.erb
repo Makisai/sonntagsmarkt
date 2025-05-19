@@ -3,6 +3,11 @@
 <div class="container mt-4">
 
 <div id="vendors">
+  <div class="card">
+    <div class="card-body">
+      <h2 class="card-title">Angemeldete Händler für den Sonntagsmarkt</h2>
+      <p class="card-text">Hier finden Sie alle Händler, die an der Veranstaltung teilnehmen.</p>
+      <%= link_to "Neuen Händler anlegen", new_vendor_path, class: "btn btn-primary btn-lg m-3 text-decoration-none text-secondary" %>
 <table class="table">
   <thead>
   <tr>
@@ -12,14 +17,12 @@
     <th><%= Vendor.human_attribute_name("email")%></th>
     <th>Stand</th>
   </thead>
-  <tbody>
+  <tbody class="table-group-divider">
   <% @vendors.each do |vendor| %>
     <%= render vendor %>
   <% end %>
     </tbody>
 </table>
-
+    </div>
+  </div>
 </div>
-<btn class="btn btn-primary mt-3">
-  <%= link_to "Neuen Händler anlegen", new_vendor_path %>
-</btn>

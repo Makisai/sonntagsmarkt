@@ -20,7 +20,7 @@ class VendorsControllerTest < ActionDispatch::IntegrationTest
       post vendors_url, params: { vendor: { address: @vendor.address, contact: @vendor.contact, email: @vendor.email, last_visit: @vendor.last_visit, legalform: @vendor.legalform, name: @vendor.name, phone: @vendor.phone, taxnumber: @vendor.taxnumber, taxoffice: @vendor.taxoffice, visit_day: @vendor.visit_day } }
     end
 
-    assert_redirected_to vendor_url(Vendor.last)
+    assert_redirected_to new_stand_path(vendor_id: Vendor.last.id)
   end
 
   test "should show vendor" do

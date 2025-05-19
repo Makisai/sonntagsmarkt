@@ -3,7 +3,7 @@
   --primary-color: #FBF447;
   --secondary-color: #00004C;
   --accent-color: #0f889e;
-  --background-color: #d2edf5;
+  --background-color: #32326F;
   --text-color: #00004C;
 }
 
@@ -19,11 +19,16 @@ $theme-colors: (
 );
 
 @import "bootstrap";
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
 
 
 
 body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   background-color: var(--background-color);
-  color: var(--text-color);
+  color: var(--primary-color);
+}
+
+.new-headlines {
+  margin: 2rem;
 }

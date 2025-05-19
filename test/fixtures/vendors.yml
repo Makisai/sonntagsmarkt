@@ -5,8 +5,8 @@ one:
   legalform: MyString
   contact: MyString
   address: MyString
-  phone: MyString
-  email: MyString
+  phone: 012345678910
+  email: MyString@example.com
   taxnumber: MyString
   taxoffice: MyString
   last_visit: 2025-05-11
@@ -17,8 +17,8 @@ two:
   legalform: MyString
   contact: MyString
   address: MyString
-  phone: MyString
-  email: MyString
+  phone: 012345678910
+  email: MyString@example.com
   taxnumber: MyString
   taxoffice: MyString
   last_visit: 2025-05-11
