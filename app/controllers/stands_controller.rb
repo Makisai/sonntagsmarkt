@@ -25,7 +25,7 @@ class StandsController < ApplicationController
 
     respond_to do |format|
       if @stand.save
-        format.html { redirect_to @stand.vendor, notice: "Stand was successfully created." }
+        format.html { redirect_to @stand.vendor, notice: I18n.t("stand.created") }
         format.json { render :show, status: :created, location: @stand }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -38,7 +38,7 @@ class StandsController < ApplicationController
   def update
     respond_to do |format|
       if @stand.update(stand_params)
-        format.html { redirect_to @stand, notice: "Stand was successfully updated." }
+        format.html { redirect_to @stand, notice: I18n.t("stand.updated") }
         format.json { render :show, status: :ok, location: @stand }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -52,7 +52,7 @@ class StandsController < ApplicationController
     @stand.destroy!
 
     respond_to do |format|
-      format.html { redirect_to stands_path, status: :see_other, notice: "Stand was successfully destroyed." }
+      format.html { redirect_to stands_path, status: :see_other, notice: I18n.t("stand.destroyed") } 
       format.json { head :no_content }
     end
   end

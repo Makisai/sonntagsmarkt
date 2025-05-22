@@ -20,12 +20,14 @@
   </head>
 
   <body data-bs-theme="light">
-    <%= render "layouts/nav" %>
+    <%= render "layouts/nav" if authenticated?%>
 
-  <% if notice.present? %>
-    <p class="alert alert-success" role="alert"><%= notice %></p>
-  <% end %>
+    <% if notice.present? %>
+      <p class="alert alert-success" role="alert"><%= notice %></p>
+    <% end %>
 
     <%= yield %>
+    
+    <%= render "layouts/footer"%>
   </body>
 </html>

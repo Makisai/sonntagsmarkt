@@ -55,5 +55,18 @@ de:
     created: Der Händler wurde erfolgreich angelegt.
     updated: Der Händler wurde erfolgreich aktualisiert.
     deleted: Der Händler wurde erfolgreich gelöscht.
+  stand:
+    created: Der Stand wurde erfolgreich angelegt.
+    updated: Der Stand wurde erfolgreich aktualisiert.
+    deleted: Der Stand wurde erfolgreich gelöscht.
   validator:
     phone: "Bitte eine gültige Telefonnummer eingeben."
+  login:
+    title: "Sonntagsmarkt"
+    email: "E-Mail-Adresse"
+    password: "Passwort"
+    submit: "Anmelden"
+    forgot_password: "Passwort vergessen?"
+  legal:
+    imprint: "Impressum"
+    privacy: "Datenschutz"

@@ -1,11 +1,22 @@
-<%= tag.div(flash[:alert], style: "color:red") if flash[:alert] %>
-<%= tag.div(flash[:notice], style: "color:green") if flash[:notice] %>
-
-<%= form_with url: session_path do |form| %>
-  <%= form.email_field :email_address, required: true, autofocus: true, autocomplete: "username", placeholder: "Enter your email address", value: params[:email_address] %><br>
-  <%= form.password_field :password, required: true, autocomplete: "current-password", placeholder: "Enter your password", maxlength: 72 %><br>
-  <%= form.submit "Sign in" %>
-<% end %>
-<br>
-
-<%= link_to "Forgot password?", new_password_path %>
+<div style="display: flex; justify-content: center; align-items: center; min-height: 80vh;">
+  <div style="width: 350px; padding: 2rem; border: 1px solid #FBF447; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); background: #00004C;">
+    <%= tag.div(flash[:alert], style: "color:red") if flash[:alert] %>
+    <%= tag.div(flash[:notice], style: "color:green") if flash[:notice] %>
+    <h2 style="text-align: center; color: #FBF447;"><%= I18n.t("login.title")%></h2>
+    <div style="display: flex; justify-content: center;">
+  <img src="<%= asset_path('logo_volksfestverein.png') %>" alt="" style="margin-bottom: 1rem">
+  </div>
+    <%= form_with url: session_path do |form| %>
+      <div style="margin-bottom: 1rem;">
+        <%= form.email_field :email_address, required: true, autofocus: true, autocomplete: "username", placeholder: I18n.t("login.email"), value: params[:email_address], style: "width: 100%; padding: 0.5rem;" %>
+      </div>
+      <div style="margin-bottom: 1rem;">
+        <%= form.password_field :password, required: true, autocomplete: "current-password", placeholder: I18n.t("login.password"), maxlength: 72, style: "width: 100%; padding: 0.5rem;" %>
+      </div>
+      <%= form.submit I18n.t("login.submit"), style: "width: 100%; padding: 0.5rem;", class: "btn btn-primary" %>
+    <% end %>
+    <div style="margin-top: 1rem; text-align: center;">
+      <%= link_to I18n.t("login.forgot_password"), new_password_path %>
+    </div>
+  </div>
+</div>
