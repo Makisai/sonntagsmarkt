@@ -1,6 +1,11 @@
-<% content_for :title, "Händler Bearbeiten" %>
+<% content_for :title, I18n.t("vendor.header.edit") %>
+      <span>
+        <a href="<%= vendors_path %>" title="Bearbeiten">
+        <i class="bi bi-pencil"></i>
+      </a>
+    </span>
 
-<h1>Editing vendor</h1>
+<h1><%=I18n.t("vendor.header.edit") %></h1>
 
 <%= render "form", vendor: @vendor %>
 

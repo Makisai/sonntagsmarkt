@@ -55,6 +55,10 @@ de:
     created: Der Händler wurde erfolgreich angelegt.
     updated: Der Händler wurde erfolgreich aktualisiert.
     deleted: Der Händler wurde erfolgreich gelöscht.
+    header:
+      edit: "Händler bearbeiten"
+      new: "Neuen Händler anlegen"
+      show: "Händler anzeigen"
   stand:
     created: Der Stand wurde erfolgreich angelegt.
     updated: Der Stand wurde erfolgreich aktualisiert.
@@ -69,4 +73,4 @@ de:
     forgot_password: "Passwort vergessen?"
   legal:
     imprint: "Impressum"
-    privacy: "Datenschutz"
+    privacy: "Datenschutzerklärung"

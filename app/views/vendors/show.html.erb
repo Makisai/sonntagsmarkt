@@ -3,7 +3,6 @@
 <%= render 'stands/stand', stand: @vendor.stand %>
 
 <div>
-  <%= link_to "Diesen Händler bearbeiten", edit_vendor_path(@vendor) %> |
   <%= link_to "Zurück zur Händlerübersicht", vendors_path %>
 
   <%= button_to "Diesen Händler löschen", @vendor, method: :delete %>

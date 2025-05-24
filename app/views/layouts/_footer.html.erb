@@ -1,21 +1,22 @@
 <footer class="bg-light py-2 fixed-bottom">
     <ul class="nav justify-content-center">
         <li class="nav-item">
-            <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-            Impressum </button>
+            <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#imprint">
+            <%= I18n.t("legal.imprint") %></button>
         </li>
         <li class="nav-item mx-3">
-            <%= link_to 'Datenschutzerklärung', '#', class: 'nav-link text-muted' %>
+        <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#privacy">
+            <%= I18n.t("legal.privacy") %> </button>
         </li>
     </ul>
 </footer>
 
 <!-- Modal Impressum-->
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<div class="modal fade" id="imprint" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog modal-xl">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="staticBackdropLabel">Impressum</h1>
+        <h1 class="modal-title fs-5" id="staticBackdropLabel"><%= I18n.t("legal.imprint") %></h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
@@ -29,15 +30,15 @@
 </div>
 
 <!-- Modal Datenschutz-->
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<div class="modal fade" id="privacy" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog modal-xl">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="staticBackdropLabel">Datenschutz </h1>
+        <h1 class="modal-title fs-5" id="staticBackdropLabel"><%= I18n.t("legal.privacy") %> </h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-       <%= render "layouts/impress" %>
+       <%= render "layouts/privacy" %>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Understood</button>
