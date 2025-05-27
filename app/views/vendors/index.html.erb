@@ -8,6 +8,17 @@
       <h2 class="card-title">Angemeldete Händler für den Sonntagsmarkt</h2>
       <p class="card-text">Hier finden Sie alle Händler, die an der Veranstaltung teilnehmen.</p>
       <%= link_to "Neuen Händler anlegen", new_vendor_path, class: "btn btn-primary btn-lg m-3 text-decoration-none text-secondary" %>
+      <div class="row mb-3">
+        <div class="col d-flex justify-content-end">
+          <%= form_with url: vendors_path, method: :get, data: { controller: "search-form", search_form_target: "form", turbo_frame: "vendors" }, class: "d-flex align-items-end" do |form| %>
+            <div class="me-2">
+              <%= form.label :name, "Suche", class: "form-label" %>
+              <%= form.text_field :name, placeholder: I18n.t("vendor.actions.search"), value: params[:name], class: "form-control", data: { action: "input->search-form#search", search_form_target: "input" } %>
+            </div>
+            <%= form.submit "Suchen", class: "btn btn-primary mb-1" %>
+          <% end %>
+        </div>
+      </div>
       <div class="overflow-scroll-sm">
         <table class="table  sort-link">
           <thead>
@@ -22,11 +33,13 @@
               <th>Stand</th>
               <th>zuletzt bearbeitet</th>
           </thead>
-          <tbody class="table-group-divider">
-            <% @vendors.each do |vendor| %>
-              <%= render vendor %>
-            <% end %>
-          </tbody>
+          <%= turbo_frame_tag "vendors" do %>
+            <tbody class="table-group-divider">
+              <% @vendors.each do |vendor| %>
+                <%= render vendor %>
+              <% end %>
+            </tbody>
+          <% end %>
         </table>
       </div>
     </div>

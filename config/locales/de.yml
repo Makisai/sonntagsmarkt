@@ -64,6 +64,7 @@ de:
       delete: "Händler löschen"
       show: "Händler anzeigen"
       new: "Neuen Händler anlegen"
+      search: "Händler nach Namen suchen"
   stand:
     created: Der Stand wurde erfolgreich angelegt.
     updated: Der Stand wurde erfolgreich aktualisiert.
