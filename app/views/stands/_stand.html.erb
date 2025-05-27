@@ -1,7 +1,13 @@
 <% if stand.present? %>
   <div id="<%= dom_id stand %>" class="card m-3">
     <div class="card-body">
-      <h5 class="card-title">Stand Details</h5>
+      <h5 class="card-title">Stand Details
+        <span>
+          <a href="<%= edit_stand_path(stand) %>" title="<%= I18n.t("stand.actions.edit")%>"> 
+            <i class="bi bi-pencil"></i>
+          </a>
+        </span>
+      </h5>
       <div class="row">
         <div class="col-md-6">
           <p><strong>Frontmeter:</strong> <%= stand.width %></p>
@@ -31,6 +37,6 @@
   </div>
 <% else %>
   <div class="alert alert-warning">
-    <p>Es wurde noch kein Stand für diesen Ausstellenden hinzugefügt.</p>
+    <p><%=I18n.t("stand.empty")%></p>
   </div>
 <% end %>

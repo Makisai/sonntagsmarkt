@@ -1,9 +1,11 @@
+
 <% content_for :title, I18n.t("vendor.header.edit") %>
       <span>
-        <a href="<%= vendors_path %>" title="Bearbeiten">
-        <i class="bi bi-pencil"></i>
+        <a href="<%= vendors_path %>" title="Zurück">
+        <i class="bi bi-arrow-left-circle"></i>
       </a>
     </span>
+<div class="container mt-4">
 
 <h1><%=I18n.t("vendor.header.edit") %></h1>
 
@@ -12,6 +14,7 @@
 <br>
 
 <div>
-  <%= link_to "Diesen Händler anzeigen", @vendor %> |
+  <%= link_to I18n.t("vendor.actions.show"), @vendor %> |
   <%= link_to "Zurück zur Händlerübersicht", vendors_path %>
+</div>
 </div>

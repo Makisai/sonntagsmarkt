@@ -8,13 +8,19 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 
+User.create!(
+    email_address: "annette@example.org",
+    password: "Vereinskroko793",
+    password_confirmation: "Vereinskroko793"
+    )
+
 5.times do
     vendor = Vendor.create(
-        name: Faker::Company.name, 
+        name: Faker::Company.name,
         legalform: Faker::Company.suffix,
         contact: Faker::Name.name,
         address: Faker::Address.full_address,
-        phone: Faker::PhoneNumber.phone_number,
+        phone: "0123456789101",
         email: Faker::Internet.email,
         taxnumber: Faker::Company.ein,
         taxoffice: Faker::Address.city,
@@ -23,8 +29,8 @@
     )
 
     vendor.stand = Stand.create(
-        width: Faker::Number.between(from: 1, to: 10), 
-        height: Faker::Number.between(from: 1, to: 10), 
+        width: Faker::Number.between(from: 1, to: 10),
+        height: Faker::Number.between(from: 1, to: 10),
         depth: Faker::Number.between(from: 1, to: 10),
         diameter: Faker::Number.between(from: 1, to: 10),
         description: Faker::Lorem.sentence(word_count: 10),

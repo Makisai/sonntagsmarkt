@@ -1,12 +1,14 @@
 <% content_for :title, "Editing stand" %>
 
-<h1>Editing stand</h1>
+<div class="container mt-4">
+  <h1>Editing stand</h1>
 
-<%= render "form", stand: @stand %>
+  <%= render "form", stand: @stand %>
 
-<br>
+  <br>
 
-<div>
-  <%= link_to "Show this stand", @stand %> |
-  <%= link_to "Back to stands", stands_path %>
+  <div>
+    <%= link_to "Show this stand", @stand %> |
+    <%= link_to "Back to stands", stands_path %>
+  </div>
 </div>

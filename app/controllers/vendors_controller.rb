@@ -3,7 +3,11 @@ class VendorsController < ApplicationController
 
   # GET /vendors or /vendors.json
   def index
-    @vendors = Vendor.all
+    if params[:column].present?
+      @vendors = Vendor.order("#{params[:column]} #{params[:direction]}")
+    else
+      @vendors = Vendor.all
+    end
   end
 
   # GET /vendors/1 or /vendors/1.json

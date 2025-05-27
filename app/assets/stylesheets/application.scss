@@ -27,8 +27,39 @@ body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   background-color: var(--background-color);
   color: var(--primary-color);
+  margin-bottom: 4rem;
+}
+
+.sort-link {
+   text-decoration: none !important;
 }
 
 .new-headlines {
   margin: 2rem;
+}
+
+@media (max-width: 1400px) {
+  .overflow-scroll-sm {
+    overflow-x: auto;
+  }
+}
+
+.sort {
+  top: 1rem;
+  left: 0.5rem;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3em;
+}
+
+.sort-desc {
+  border-top: 8px solid var(--text-color);
+}
+
+.sort-asc {
+  border-bottom: 8px solid var(--text-color);
 }

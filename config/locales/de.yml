@@ -59,10 +59,25 @@ de:
       edit: "Händler bearbeiten"
       new: "Neuen Händler anlegen"
       show: "Händler anzeigen"
+    actions:
+      edit: "Händler bearbeiten"
+      delete: "Händler löschen"
+      show: "Händler anzeigen"
+      new: "Neuen Händler anlegen"
   stand:
     created: Der Stand wurde erfolgreich angelegt.
     updated: Der Stand wurde erfolgreich aktualisiert.
     deleted: Der Stand wurde erfolgreich gelöscht.
+    empty: Es wurde noch kein Stand für diesen Ausstellenden hinzugefügt.
+    header:
+      edit: "Stand bearbeiten"
+      new: "Neuen Stand anlegen"
+      show: "Stand anzeigen"
+    actions:
+      edit: "Stand bearbeiten"
+      delete: "Stand löschen"
+      show: "Stand anzeigen"
+      new: "Neuen Stand anlegen"
   validator:
     phone: "Bitte eine gültige Telefonnummer eingeben."
   login:

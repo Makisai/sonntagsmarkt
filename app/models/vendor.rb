@@ -10,6 +10,20 @@ class Vendor < ApplicationRecord
     has_paper_trail
 
     def last_changes_from
-      User.find(paper_trail.originator).email_address if paper_trail.originator
+      last_version = if stand.present?
+       last_version_of_vendor_and_stand
+      else
+        versions.last
+      end
+
+      User.find(last_version.whodunnit).email_address if last_version.present? && last_version.whodunnit.present?
     end
+
+    private def last_version_of_vendor_and_stand
+      last_stand_version = stand.versions.last
+      last_vendor_version = versions.last
+
+      last_stand_version.created_at > last_vendor_version.created_at ? last_stand_version : last_vendor_version
+    end
+
 end

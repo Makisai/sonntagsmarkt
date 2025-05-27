@@ -8,22 +8,27 @@
       <h2 class="card-title">Angemeldete Händler für den Sonntagsmarkt</h2>
       <p class="card-text">Hier finden Sie alle Händler, die an der Veranstaltung teilnehmen.</p>
       <%= link_to "Neuen Händler anlegen", new_vendor_path, class: "btn btn-primary btn-lg m-3 text-decoration-none text-secondary" %>
-<table class="table">
-  <thead>
-  <tr>
-    <th><%= Vendor.human_attribute_name("name")%></th>
-    <th><%= Vendor.human_attribute_name("contact")%></th>
-    <th><%= Vendor.human_attribute_name("phone")%></th>
-    <th><%= Vendor.human_attribute_name("email")%></th>
-    <th>letyte person</th>
-    <th>Stand</th>
-  </thead>
-  <tbody class="table-group-divider">
-  <% @vendors.each do |vendor| %>
-    <%= render vendor %>
-  <% end %>
-    </tbody>
-</table>
+      <div class="overflow-scroll-sm">
+        <table class="table  sort-link">
+          <thead>
+            <tr>
+              <th>
+                <%= sort_link(column: "name", lable: Vendor.human_attribute_name("name")) %>
+                <%= show_sort_indicator_for("name")%>
+              </th>
+              <th><%= Vendor.human_attribute_name("contact")%></th>
+              <th><%= Vendor.human_attribute_name("phone")%></th>
+              <th><%= Vendor.human_attribute_name("email")%></th>
+              <th>Stand</th>
+              <th>zuletzt bearbeitet</th>
+          </thead>
+          <tbody class="table-group-divider">
+            <% @vendors.each do |vendor| %>
+              <%= render vendor %>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
 </div>
