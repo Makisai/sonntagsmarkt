@@ -1,14 +1,14 @@
 <% content_for :title, "Editing stand" %>
 
 <div class="container mt-4">
-  <h1>Editing stand</h1>
+  <h1><%= I18n-t("stand.header.edit")%></h1>
 
   <%= render "form", stand: @stand %>
 
   <br>
 
   <div>
-    <%= link_to "Show this stand", @stand %> |
-    <%= link_to "Back to stands", stands_path %>
+    <%= link_to I18n.t("stand.actions.show"), @stand %> |
+    <%= link_to I18n.t("stand.actions.show_all"), stands_path %>
   </div>
 </div>

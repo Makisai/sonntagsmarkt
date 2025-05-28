@@ -1,16 +1,13 @@
 <% content_for :title, "Händler Hinzufügen" %>
 
 <div class="container mt-4">
+  <h1 class="new-headlines"><%= I18n.t("vendor.header.new")%></h1>
 
-  <div id="vendors">
-    
-<h1 class="new-headlines">Neuer Händler</h1>
+  <%= render "form", vendor: @vendor %>
 
-<%= render "form", vendor: @vendor %>
+  <br>
 
-<br>
-
-<div>
-  <%= link_to "Zurück zur Händlerübersicht", vendors_path %>
-</div>
+  <div>
+    <%= link_to "Zurück zur Händlerübersicht", vendors_path %>
   </div>
+</div>

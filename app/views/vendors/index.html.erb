@@ -20,9 +20,13 @@
         </div>
       </div>
       <div class="overflow-scroll-sm">
-        <table class="table  sort-link">
+        <table class="table sort-link">
           <thead>
             <tr>
+              <th>
+                <%= sort_link(column: "id", lable: Vendor.human_attribute_name("id")) %>
+                <%= show_sort_indicator_for("id")%>
+              </th>
               <th>
                 <%= sort_link(column: "name", lable: Vendor.human_attribute_name("name")) %>
                 <%= show_sort_indicator_for("name")%>
@@ -31,6 +35,7 @@
               <th><%= Vendor.human_attribute_name("phone")%></th>
               <th><%= Vendor.human_attribute_name("email")%></th>
               <th>Stand</th>
+              <th><%= sort_link(column: "visit_day", lable: Vendor.human_attribute_name("visit_day")) %></th>
               <th>zuletzt bearbeitet</th>
           </thead>
           <%= turbo_frame_tag "vendors" do %>

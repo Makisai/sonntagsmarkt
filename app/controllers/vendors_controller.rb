@@ -8,7 +8,7 @@ class VendorsController < ApplicationController
     else
       @vendors = Vendor.all
     end
-    @vendors = @vendors.where("name LIKE ?", "%#{params[:name]}%") if params[:name].present?
+    @vendors = @vendors.where("name LIKE :q OR contact LIKE :q", q: "%#{params[:name]}%") if params[:name].present?
   end
 
   # GET /vendors/1 or /vendors/1.json

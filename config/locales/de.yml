@@ -32,6 +32,8 @@ de:
           attributes:
             name:
               blank: "Bitte geben Sie den Namen des Betreibenden ein."
+            contact:
+              blank: "Bitte geben Sie einen Ansprechpartner oder eine Ansprechpartnerin des Betreibenden ein."
             address:
               blank: "Bitte geben Sie die Adresse des Betreibenden ein."
             phone:
@@ -45,10 +47,13 @@ de:
           attributes:
             width:
               blank: "Bitte geben Sie die Breite des Standes ein."
+              not_a_number: "Die Breite muss eine Zahl sein."
             height:
               blank: "Bitte geben Sie die Höhe des Standes ein."
+              not_a_number: "Die Höhe muss eine Zahl sein."
             depth:
               blank: "Bitte geben Sie die Tiefe des Standes ein."
+              not_a_number: "Die Tiefe muss eine Zahl sein."
             description:
               blank: "Bitte geben Sie eine Beschreibung für Ihren Marktstand ein."
   vendor:
@@ -57,7 +62,7 @@ de:
     deleted: Der Händler wurde erfolgreich gelöscht.
     header:
       edit: "Händler bearbeiten"
-      new: "Neuen Händler anlegen"
+      new: "Neuer Händler"
       show: "Händler anzeigen"
     actions:
       edit: "Händler bearbeiten"
@@ -65,6 +70,15 @@ de:
       show: "Händler anzeigen"
       new: "Neuen Händler anlegen"
       search: "Händler nach Namen suchen"
+    visit_days:
+      saturday: "Samstag"
+      sunday: "Sonntag"
+      both: "Samstag und Sonntag"
+    form:
+      placeholder:
+        legalform: "GmbH, GbR, etc."
+        address: "Straße, Hausnummer, PLZ und Ort"
+        last_visit: "In welchem Jahr waren sie zuletzt Teilnehmende am Sonntagsmarkt zum Volksfest in Malchow?"
   stand:
     created: Der Stand wurde erfolgreich angelegt.
     updated: Der Stand wurde erfolgreich aktualisiert.
@@ -72,13 +86,18 @@ de:
     empty: Es wurde noch kein Stand für diesen Ausstellenden hinzugefügt.
     header:
       edit: "Stand bearbeiten"
-      new: "Neuen Stand anlegen"
+      new: "Neuer Stand"
       show: "Stand anzeigen"
     actions:
       edit: "Stand bearbeiten"
       delete: "Stand löschen"
       show: "Stand anzeigen"
       new: "Neuen Stand anlegen"
+      show_all: "Alle Stände anzeigen"
+    form:
+      placeholder:
+        description: "Was wollen Sie auf dem Sonntagsmarkt anbieten? z.B. Sind Sie Selbsterzeuger? Welche Artikel
+kaufen Sie zu? Bei Imbissbetrieben: Welche Artikel genau wollen sie anbieten?"
   validator:
     phone: "Bitte eine gültige Telefonnummer eingeben."
   login:

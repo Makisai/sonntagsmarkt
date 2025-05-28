@@ -1,9 +1,15 @@
     <tr>
+      <td><%= vendor.id %></td>
       <td><%= link_to vendor.name, vendor %></td>
       <td><%= vendor.contact %></td>
       <td><%= vendor.phone %></td>
       <td><%= vendor.email %></td>
-      <td><%= link_to "Stand", vendor.stand %></td>
+      <% if vendor.stand.present? %>
+        <td><%= link_to "Stand", vendor.stand %></td>
+      <% else %>
+        <td></td>
+      <% end %>    
+      <td><%= vendor.visit_day %></td>
       <td><%= vendor.last_changes_from %></td>
       <td>
         <%= button_to vendor, method: :delete, class: "btn btn-danger", form: { data: { turbo_confirm: "SURE about that?" } } do %>

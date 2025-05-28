@@ -1,23 +1,20 @@
 <%= simple_form_for stand, html: { class: 'form-horizontal'} do |form| %>
   <% if stand.errors.any? %>
-    <div style="color: red">
-      <h2><%= pluralize(stand.errors.count, "error") %> prohibited this stand from being saved:</h2>
-
+     <div class="alert alert-danger">
       <ul>
-        <% stand.errors.each do |error| %>
-          <li><%= error.full_message %></li>
+        <% stand.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
         <% end %>
       </ul>
     </div>
   <% end %>
 
-<div class="m-3">
+<div class="m-4">
   <%= form.input :width, input_html: {class: 'form-control'}%>
   <%= form.input :height, input_html: {class: 'form-control'}%>
   <%= form.input :depth, input_html: {class: 'form-control'}%>
   <%= form.input :diameter, input_html: {class: 'form-control'}%>
-  <%= form.input :description, as: :text, placeholder: 'Was wollen Sie auf dem Sonntagsmarkt anbieten? z.B. Sind Sie Selbsterzeuger? Welche Artikel
-kaufen Sie zu? Bei Imbissbetrieben: Welche Artikel genau wollen sie anbieten?', input_html: {class: 'form-control', rows: 5} %>
+  <%= form.input :description, as: :text, placeholder: I18n.t("stand.form.placeholder.description"), input_html: {class: 'form-control', rows: 5} %>
   <%= form.input :cooler, input_html: {class: 'form-control'}%>
   <%= form.input :table, input_html: {class: 'form-control'}%>
   <%= form.input :selfdriver, input_html: {class: 'form-check-input', style: 'width: 1.5rem; height: 1.5rem'}, label_html: {style: 'margin-left: 1rem'} %>
@@ -28,7 +25,7 @@ kaufen Sie zu? Bei Imbissbetrieben: Welche Artikel genau wollen sie anbieten?', 
   <%= form.hidden_field :vendor_id %>
 
   <div>
-    <%= form.submit %>
+    <%= form.button :submit, "Speichern", class: "btn btn-primary mt-3" %>
   </div>
 </div>
 <% end %>

@@ -1,11 +1,14 @@
-<% content_for :title, "New stand" %>
+<% content_for :title, "Stand hinzufügen" %>
 
-<h1>New stand</h1>
+<div class="container mt-4">
+  <h1 class="new-headlines"><%= I18n.t("stand.header.new")%></h1>
 
-<%= render "form", stand: @stand %>
+  <%= render "form", stand: @stand %>
 
-<br>
-
-<div>
-  <%= link_to "Back to stands", stands_path %>
+  <br>
+  <div>
+    <%= link_to "Back to stands", stands_path %>
+  </div>
 </div>
+
+
