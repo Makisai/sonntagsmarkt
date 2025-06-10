@@ -19,7 +19,7 @@ jobs:
     steps:
 
       - name: Check RAILS_MASTER_KEY
-        run: echo $RAILS_MASTER_KEY
+        run: echo $RAILS_MASTER_KEYY
 
       - name: Checkout code
         uses: actions/checkout@v3
