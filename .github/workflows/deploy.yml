@@ -3,11 +3,11 @@ name: Deploy to Production
 on:
   push:
     branches:
-      - main
+      - debug-github-actions
 
 jobs:
   Deploy:
-    if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
+    if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/debug-github-actions' }}
     runs-on: ubuntu-latest
 
     env:
@@ -17,6 +17,10 @@ jobs:
       KAMAL_REGISTRY_PASSWORD: ${{ secrets.KAMAL_REGISTRY_PASSWORD }}
 
     steps:
+
+      - name: Check RAILS_MASTER_KEY
+        run: 'echo "${RAILS_MASTER_KEY}"'
+
       - name: Checkout code
         uses: actions/checkout@v3
 
