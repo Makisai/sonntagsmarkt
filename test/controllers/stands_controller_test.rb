@@ -2,7 +2,8 @@ require "test_helper"
 
 class StandsControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @stand = stands(:one)
+     sign_in(FactoryBot.create(:user))
+     @stand = FactoryBot.create(:stand)
   end
 
   test "should get index" do
@@ -20,7 +21,7 @@ class StandsControllerTest < ActionDispatch::IntegrationTest
       post stands_url, params: { stand: { cooler: @stand.cooler, depth: @stand.depth, description: @stand.description, diameter: @stand.diameter, height: @stand.height, misc: @stand.misc, power: @stand.power, selfdriver: @stand.selfdriver, specials: @stand.specials, table: @stand.table, trailer: @stand.trailer, vendor_id: @stand.vendor_id, width: @stand.width } }
     end
 
-    assert_redirected_to stand_url(Stand.last)
+    assert_redirected_to vendor_url(Vendor.find(Stand.last.vendor_id))
   end
 
   test "should show stand" do

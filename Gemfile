@@ -16,12 +16,12 @@ gem "turbo-rails"
 gem "stimulus-rails"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
-gem 'bootstrap', '~> 5.3.3'
-gem 'foreman'
-gem 'jquery-rails'
+gem "bootstrap", "~> 5.3.3"
+gem "foreman"
+gem "jquery-rails"
 gem "simple_form"
 gem "faker"
-gem 'paper_trail'
+gem "paper_trail"
 
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 gem "bcrypt", "~> 3.1.7"
@@ -60,12 +60,16 @@ end
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
+  gem "factory_bot_rails"
 end
 
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "capybara"
   gem "selenium-webdriver"
+  gem "factory_bot_rails"
+  gem 'simplecov', require: false
+
 end
 
 gem "dartsass-rails", "~> 0.5.1"

@@ -27,6 +27,8 @@ de:
         last_visit: "Letzter Besuch"
         visit_day: "Besuchstag"
     errors:
+      messages:
+        record_invalid: "Validierung fehlgeschlagen: %{errors}"
       models:
         vendor:
           attributes:
@@ -97,7 +99,7 @@ de:
     form:
       placeholder:
         description: "Was wollen Sie auf dem Sonntagsmarkt anbieten? z.B. Sind Sie Selbsterzeuger? Welche Artikel
-kaufen Sie zu? Bei Imbissbetrieben: Welche Artikel genau wollen sie anbieten?"
+                      kaufen Sie zu? Bei Imbissbetrieben: Welche Artikel genau wollen sie anbieten?"
   validator:
     phone: "Bitte eine gültige Telefonnummer eingeben."
   login:

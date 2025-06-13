@@ -35,3 +35,14 @@
 
 /app/assets/builds/*
 !/app/assets/builds/.keep
+
+# Playwright
+node_modules/
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+
+/config/credentials/production.key
+
+/coverage

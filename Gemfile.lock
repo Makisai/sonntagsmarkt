@@ -107,12 +107,18 @@ GEM
     debug (1.10.0)
       irb (~> 1.10)
       reline (>= 0.3.8)
+    docile (1.4.1)
     dotenv (3.1.8)
     drb (2.2.1)
     ed25519 (1.4.0)
     erubi (1.13.1)
     et-orbi (1.2.11)
       tzinfo
+    factory_bot (6.5.3)
+      activesupport (>= 6.1.0)
+    factory_bot_rails (6.4.4)
+      factory_bot (~> 6.5)
+      railties (>= 5.0.0)
     faker (3.5.1)
       i18n (>= 1.8.11, < 2)
     foreman (0.88.1)
@@ -328,6 +334,12 @@ GEM
     simple_form (5.3.1)
       actionpack (>= 5.2)
       activemodel (>= 5.2)
+    simplecov (0.22.0)
+      docile (~> 1.1)
+      simplecov-html (~> 0.11)
+      simplecov_json_formatter (~> 0.1)
+    simplecov-html (0.13.1)
+    simplecov_json_formatter (0.1.4)
     solid_cable (3.0.8)
       actioncable (>= 7.2)
       activejob (>= 7.2)
@@ -407,6 +419,7 @@ DEPENDENCIES
   capybara
   dartsass-rails (~> 0.5.1)
   debug
+  factory_bot_rails
   faker
   foreman
   importmap-rails
@@ -420,6 +433,7 @@ DEPENDENCIES
   rubocop-rails-omakase
   selenium-webdriver
   simple_form
+  simplecov
   solid_cable
   solid_cache
   solid_queue

@@ -2,7 +2,9 @@ require "test_helper"
 
 class VendorsControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @vendor = vendors(:one)
+    sign_in(FactoryBot.create(:user))
+    stand = FactoryBot.build(:stand)
+    @vendor = FactoryBot.create(:vendor, stand: stand)
   end
 
   test "should get index" do
