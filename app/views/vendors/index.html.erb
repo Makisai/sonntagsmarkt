@@ -8,7 +8,7 @@
       <h2 class="card-title">Angemeldete Händler für den Sonntagsmarkt</h2>
       <p class="card-text">Hier finden Sie alle Händler, die an der Veranstaltung teilnehmen.</p>
       <%= link_to "Neuen Händler anlegen", new_vendor_path, class: "btn btn-primary btn-lg m-3 text-decoration-none text-secondary" %>
-      <%= link_to "Tabelle Drucken", printout_path, class: "btn btn-primary btn-lf m-3" %>
+      <%= link_to "Tabelle Drucken", vendors_overview_path, class: "btn btn-primary btn-lf m-3", target: "_blank" %>
       <div class="row mb-3">
         <div class="col d-flex justify-content-end">
           <%= form_with url: vendors_path, method: :get, data: { controller: "search-form", search_form_target: "form", turbo_frame: "vendors" }, class: "d-flex align-items-end" do |form| %>
