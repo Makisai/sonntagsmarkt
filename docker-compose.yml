@@ -1,0 +1,17 @@
+services:
+  app:
+    build: .
+    command: bundle exec rails s -b 0.0.0.0
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+    environment:
+      - RAILS_ENV=development
+    depends_on:
+      - chrome
+
+  chrome:
+    image: browserless/chrome:latest
+    ports:
+      - "3001:3000"

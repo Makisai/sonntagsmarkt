@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
+  get "printouts/show"
+  get "printouts/browser_ws_endpoint"
   resource :session
   resources :passwords, param: :token
   resources :stands
   resources :vendors
-  resources :dashboard, only: [:index]
+  resources :dashboard, only: [ :index ]
+  resources :printouts, only: [ :show ]
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
