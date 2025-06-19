@@ -52,7 +52,7 @@ class StandsController < ApplicationController
     @stand.destroy!
 
     respond_to do |format|
-      format.html { redirect_to stands_path, status: :see_other, notice: I18n.t("stand.destroyed") } 
+      format.html { redirect_to stands_path, status: :see_other, notice: I18n.t("stand.destroyed") }
       format.json { head :no_content }
     end
   end

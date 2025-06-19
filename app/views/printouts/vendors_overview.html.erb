@@ -5,50 +5,42 @@
     <%= wicked_pdf_stylesheet_link_tag "pdf" %>
 
   </head>
+
   <body>
-<h1>Printouts#show</h1>
-<p>Find me in app/views/printouts/show.html.erb</p>
-<table class="table sort-link">
-          <thead>
-            <tr>
-              <th>
-                <%= sort_link(column: "id", lable: Vendor.human_attribute_name("id")) %>
-                <%= show_sort_indicator_for("id")%>
-              </th>
-              <th>
-                <%= sort_link(column: "name", lable: Vendor.human_attribute_name("name")) %>
-                <%= show_sort_indicator_for("name")%>
-              </th>
-              <th><%= Vendor.human_attribute_name("contact")%></th>
-              <th><%= Vendor.human_attribute_name("phone")%></th>
-              <th><%= Vendor.human_attribute_name("email")%></th>
-              <th>Stand</th>
-              <th><%= sort_link(column: "visit_day", lable: Vendor.human_attribute_name("visit_day")) %></th>
-              <th>zuletzt bearbeitet</th>
-          </thead>
-          <%= turbo_frame_tag "vendors" do %>
-            <tbody class="table-group-divider">
-              <% @vendors.each do |vendor| %>
-                <tr>
-                    <td><%= vendor.id %></td>
-                    <td><%= link_to vendor.name, vendor %></td>
-                    <td><%= vendor.contact %></td>
-                    <td><%= vendor.phone %></td>
-                    <td><%= vendor.email %></td>
-                    <% if vendor.stand.present? %>
-                        <td><%= link_to "Stand", vendor.stand %></td>
-                    <% else %>
-                        <td></td>
-                    <% end %>    
-                    <td><%= vendor.visit_day %></td>
-                    <td><%= vendor.last_changes_from %></td>
-                    </tr>
-              <% end %>
-            </tbody>
-          <% end %>
-        </table>
-<div>
-  <%= image_tag wicked_pdf_asset_base64('logo_volksfestverein.png') %>
-</div>
+  <h1>Liste aller angemeldeten Händler für den Sonntagsmarkt</h1>
+  <div class ="logo">
+    <%= image_tag wicked_pdf_asset_base64('logo_volksfestverein.png'), width: 45, height: 45 %>
+  </div>
+  <table class="print-table print-td sort-link">
+    <thead> 
+      <tr>
+        <th class="print-thead"><%= Vendor.human_attribute_name("id") %></th>
+        <th class="print-thead"><%= Vendor.human_attribute_name("name") %></th>
+        <th class="print-thead"><%= Vendor.human_attribute_name("contact")%></th>
+        <th class="print-thead"><%= Vendor.human_attribute_name("phone")%></th>
+        <th class="print-thead"><%= Vendor.human_attribute_name("email")%></th>
+        <th class="print-thead"><%= Vendor.human_attribute_name("visit_day") %></th>
+        <th class="print-thead">zuletzt bearbeitet</th>
+        <th class="print-thead"><%= Stand.human_attribute_name("power") %></th>
+    </thead>
+      <tbody>
+        <% @vendors.each do |vendor| %>
+          <tr class="print-tbody">
+              <td class="print-tbody" ><%= vendor.id %></td>
+              <td class="print-tbody"><%= vendor.name %></td>
+              <td class="print-tbody"><%= vendor.contact %></td>
+              <td class="print-tbody"><%= vendor.phone %></td>
+              <td class="print-tbody"><%= vendor.email %></td>
+              <td class="print-tbody"><%= vendor.visit_day %></td>
+              <td class="print-tbody"><%= vendor.last_changes_from %></td>
+              <% if vendor.stand.present? %>
+                <td><%= vendor.stand.power %></td>
+              <% else %>
+                <td></td>
+              <% end %> 
+              </tr>
+        <% end %>
+      </tbody>
+  </table>
 </body>
 </html>

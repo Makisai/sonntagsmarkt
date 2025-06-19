@@ -27,5 +27,4 @@ class Vendor < ApplicationRecord
 
       last_stand_version.created_at > last_vendor_version.created_at ? last_stand_version : last_vendor_version
     end
-
 end

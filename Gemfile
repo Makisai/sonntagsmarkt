@@ -16,14 +16,14 @@ gem "turbo-rails"
 gem "stimulus-rails"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
-gem 'bootstrap', '~> 5.3.3'
-gem 'foreman'
-gem 'jquery-rails'
+gem "bootstrap", "~> 5.3.3"
+gem "foreman"
+gem "jquery-rails"
 gem "simple_form"
 gem "faker"
-gem 'paper_trail'
-gem 'wicked_pdf'
-gem 'wkhtmltopdf-binary'
+gem "paper_trail"
+gem "wicked_pdf"
+gem "wkhtmltopdf-binary"
 
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 gem "bcrypt", "~> 3.1.7"
