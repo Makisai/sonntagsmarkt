@@ -1,0 +1,27 @@
+.print-table {
+    border: 2px solid black;
+    border-collapse: collapse;
+    padding: 5px;
+}
+
+.print-thead {
+    background-color: #a9a9a9;
+    font-weight: bold;
+    border: 2px solid black;
+    border-collapse: collapse;
+    padding: 5px;
+}
+
+.print-tbody {
+    border: 2px solid #a9a9a9;
+    border-collapse: collapse;
+    padding: 5px;
+    text-align: center;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2;}
+
+.logo{
+ margin: 20px;
+ text-align: right;
+}

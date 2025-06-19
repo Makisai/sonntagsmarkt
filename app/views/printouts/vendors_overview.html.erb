@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset='utf-8' />
+    <%= wicked_pdf_stylesheet_link_tag "pdf" %>
+
+  </head>
+
+  <body>
+  <h1>Liste aller angemeldeten Händler für den Sonntagsmarkt</h1>
+  <div class ="logo">
+    <%= image_tag wicked_pdf_asset_base64('logo_volksfestverein.png'), width: 45, height: 45 %>
+  </div>
+  <table class="print-table print-td sort-link">
+    <thead> 
+      <tr>
+        <th class="print-thead"><%= Vendor.human_attribute_name("id") %></th>
+        <th class="print-thead"><%= Vendor.human_attribute_name("name") %></th>
+        <th class="print-thead"><%= Vendor.human_attribute_name("contact")%></th>
+        <th class="print-thead"><%= Vendor.human_attribute_name("phone")%></th>
+        <th class="print-thead"><%= Vendor.human_attribute_name("email")%></th>
+        <th class="print-thead"><%= Vendor.human_attribute_name("visit_day") %></th>
+        <th class="print-thead">zuletzt bearbeitet</th>
+        <th class="print-thead"><%= Stand.human_attribute_name("power") %></th>
+    </thead>
+      <tbody>
+        <% @vendors.each do |vendor| %>
+          <tr class="print-tbody">
+              <td class="print-tbody" ><%= vendor.id %></td>
+              <td class="print-tbody"><%= vendor.name %></td>
+              <td class="print-tbody"><%= vendor.contact %></td>
+              <td class="print-tbody"><%= vendor.phone %></td>
+              <td class="print-tbody"><%= vendor.email %></td>
+              <td class="print-tbody"><%= vendor.visit_day %></td>
+              <td class="print-tbody"><%= vendor.last_changes_from %></td>
+              <% if vendor.stand.present? %>
+                <td><%= vendor.stand.power %></td>
+              <% else %>
+                <td></td>
+              <% end %> 
+              </tr>
+        <% end %>
+      </tbody>
+  </table>
+</body>
+</html>

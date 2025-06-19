@@ -9,7 +9,7 @@ class VendorRegistrationsController < ApplicationController
       @vendor = Vendor.new(registration_params[:vendor])
       @vendor.stand = Stand.new(registration_params[:stand])
       if @vendor.save
-        redirect_to @vendor, notice: 'Vendor was successfully created.'
+        redirect_to @vendor, notice: "Vendor was successfully created."
       else
         render :new
       end

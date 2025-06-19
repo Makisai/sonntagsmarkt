@@ -3,7 +3,9 @@ Rails.application.routes.draw do
   resources :passwords, param: :token
   resources :stands
   resources :vendors
-  resources :dashboard, only: [:index]
+  resources :dashboard, only: [ :index ]
+  get "vendors_overview", to: "printouts#vendors_overview", as: :vendors_overview
+  get "vendors_and_stand_details/:vendor_id", to: "printouts#vendors_and_stand_details", as: :vendors_and_stand_details
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

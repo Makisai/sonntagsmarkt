@@ -64,3 +64,9 @@ body {
 .sort-asc {
   border-bottom: 8px solid var(--text-color);
 }
+
+@page {   
+  @bottom-center {     
+    content: "Page " counter(page) " of " counter(pages);   
+  } 
+}
